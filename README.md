@@ -1,4 +1,4 @@
-jquery-plugin-framework
+jquery-plugin-boilerplate
 =======================
 
-jQuery Plugin Framework: A Base Framework for jQuery Plugins
+jQuery Plugin Boilerplate
