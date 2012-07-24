@@ -1,3 +1,14 @@
+/*
+jQuery Plugin Boilerplate:
+ - change 'PLUGINNAME'
+ - add necessary default options
+ - add init logic
+ - create additional plugin methods, as needed (following Plugin.prototype.METHODNAME convention)
+
+Usage:
+ - $('<div>').PLUGINNAME();
+ - $('<div>').PLUGINNAME('METHODNAME',[ARGUMENTS]);
+*/
 ;(function($){
   var pluginName = 'PLUGINNAME',
       defaults = {
@@ -28,11 +39,11 @@
         $(this).data('plugin_' + pluginName, new Plugin(this, options));
       } else if (instance[options]){
         /*call instance's method (if it exists)*/
-        instance[options].apply(instance, [args]);
+        instance[options].apply(instance, args);
       } else {
         /*throw error if method doesn't exist*/
         $.error('Method ' +  options + ' does not exist on jQuery.' + pluginName);
       }
     });
   };
-}(jQuery));
+})(jQuery);
