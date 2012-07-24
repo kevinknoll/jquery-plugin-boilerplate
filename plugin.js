@@ -7,7 +7,10 @@ jQuery Plugin Boilerplate:
 
 Usage:
  - $('<div>').PLUGINNAME();
- - $('<div>').PLUGINNAME('METHODNAME', ARG1, ARG2);
+ - $('<div>').PLUGINNAME('METHODNAME', {
+    arg1:'value1',
+    arg2:'value2'
+ });
 */
 ;(function($){
   var pluginName = 'PLUGINNAME',
