@@ -7,7 +7,7 @@ jQuery Plugin Boilerplate:
 
 Usage:
  - $('<div>').PLUGINNAME();
- - $('<div>').PLUGINNAME('METHODNAME',[ARGUMENTS]);
+ - $('<div>').PLUGINNAME('METHODNAME', ARG1, ARG2);
 */
 ;(function($){
   var pluginName = 'PLUGINNAME',
@@ -39,7 +39,7 @@ Usage:
         $(this).data('plugin_' + pluginName, new Plugin(this, options));
       } else if (instance[options]){
         /*call instance's method (if it exists)*/
-        instance[options].apply(instance, args);
+        instance[options].call(instance, args);
       } else {
         /*throw error if method doesn't exist*/
         $.error('Method ' +  options + ' does not exist on jQuery.' + pluginName);
